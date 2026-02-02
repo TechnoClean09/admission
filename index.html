@@ -3,138 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission Enquiry Form - Shri Swami Vivekanand Shikshan Sanstha</title>
+    <title>Admission Enquiry - Dr. Bapuji Salunkhe Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .form-input { width: 100%; border-bottom: 1px solid #000; padding: 4px; outline: none; }
-        .grid-border { border: 1px solid #000; }
-        .cell-border { border-right: 1px solid #000; border-bottom: 1px solid #000; }
-    </style>
 </head>
-<body class="bg-gray-200 py-6 px-4 font-sans text-sm">
+<body class="bg-gray-50 py-4 px-2 font-sans text-gray-900">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-2xl p-6 md:p-10 border-t-8 border-blue-900">
+    <div class="max-w-xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
         
-        <div class="text-center mb-6">
-            <h1 class="text-lg md:text-xl font-bold uppercase leading-tight">"Dissemination of Education for Knowledge, Science & Culture"</h1>
-            <p class="text-sm italic">- Shikshanmaharshi Dr. Bapuji Salunkhe</p>
-            <h2 class="text-lg font-bold mt-4 uppercase">Shri Swami Vivekanand Shikshan Sanstha, Kolhapur</h2>
-            <p class="font-semibold text-gray-700 uppercase">Professional Units</p>
-            
-            <div class="mt-4 border-y-2 border-black py-2">
-                <h3 class="text-2xl font-black tracking-[0.2em]">FEEDBACK FORM</h3>
+        <div class="bg-white p-6 text-center border-b-4 border-orange-500">
+            <p class="text-red-700 font-bold text-xs mb-2">“ज्ञान, विज्ञान आणि सुसंस्कार यांसाठी शिक्षणप्रसार” – शिक्षणमहर्षी डॉ. बापूजी साळुंखे</p>
+            <h1 class="text-blue-900 font-black text-lg uppercase leading-tight">Shri Swami Vivekanand Shikshan Sanstha's</h1>
+            <h2 class="text-blue-800 font-bold text-xl mt-1">DR. BAPUJI SALUNKHE INSTITUTE OF ENGINEERING AND TECHNOLOGY</h2>
+            <div class="flex justify-center gap-4 mt-2 text-xs font-bold text-red-700">
+                <span>DEGREE (DBATU)</span>
+                <span class="text-gray-400">|</span>
+                <span>DIPLOMA (MSBTE)</span>
             </div>
+            <p class="text-xs font-bold mt-1">DTE Code : 6468</p>
         </div>
 
-        <form id="admissionForm">
-            <div class="grid-border grid grid-cols-1 md:grid-cols-4">
+        <div class="p-6">
+            <h3 class="text-center font-bold text-lg mb-6 bg-gray-100 py-2 rounded">STUDENT ENQUIRY FORM</h3>
+            
+            <form id="admissionForm" class="space-y-5">
                 
-                <div class="cell-border p-2 font-bold flex items-center">STUDENT NAME</div>
-                <div class="cell-border p-2 col-span-3">
-                    <input type="text" name="studentName" class="form-input" required>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Student Full Name</label>
+                    <input type="text" name="studentName" placeholder="Enter your name" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
                 </div>
 
-                <div class="cell-border p-2 font-bold flex items-center">PARENT NAME</div>
-                <div class="cell-border p-2 col-span-3">
-                    <input type="text" name="parentName" class="form-input" required>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Parent Full Name</label>
+                    <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
                 </div>
 
-                <div class="cell-border p-2 font-bold">STUDENT MOB. NO.</div>
-                <div class="cell-border p-2">
-                    <input type="tel" name="studentMob" pattern="[0-9]{10}" class="form-input" placeholder="10 Digits" required>
-                </div>
-                <div class="cell-border p-2 font-bold">PARENT MOB. NO.</div>
-                <div class="cell-border p-2">
-                    <input type="tel" name="parentMob" pattern="[0-9]{10}" class="form-input" placeholder="10 Digits" required>
-                </div>
-
-                <div class="cell-border p-2 font-bold">CATEGORY</div>
-                <div class="cell-border p-2 col-span-3 flex flex-wrap gap-3 items-center">
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="OPEN" required> OPEN</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="SEBC"> SEBC</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="EWS"> EWS</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="OBC"> OBC</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="SBC"> SBC</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="SC"> SC</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="ST"> ST</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="VJ"> VJ</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="NT"> NT</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="category" value="DT"> DT</label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Student Mobile No.</label>
+                        <input type="tel" name="studentMob" required
+                               pattern="[0-9]{10}" 
+                               oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                               placeholder="10 digit number" 
+                               class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Parent Mobile No.</label>
+                        <input type="tel" name="parentMob" required
+                               pattern="[0-9]{10}" 
+                               oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                               placeholder="10 digit number" 
+                               class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none">
+                    </div>
                 </div>
 
-                <div class="cell-border p-2 font-bold">ADDRESS</div>
-                <div class="cell-border p-2 col-span-3">
-                    <input type="text" name="address" class="form-input" required>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Category</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="OPEN" required> OPEN
+                        </label>
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="OBC"> OBC
+                        </label>
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="EWS"> EWS
+                        </label>
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="SC"> SC
+                        </label>
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="ST"> ST
+                        </label>
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                            <input type="radio" name="category" value="SEBC"> SEBC
+                        </label>
+                    </div>
                 </div>
 
-                <div class="cell-border p-2 font-bold leading-tight">12<sup>th</sup> COLLEGE NAME</div>
-                <div class="cell-border p-2 col-span-3">
-                    <input type="text" name="collegeName12th" class="form-input" required>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">12th College Name</label>
+                    <input type="text" name="collegeName12th" placeholder="Enter your previous college" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
                 </div>
-            </div>
 
-            <div class="grid-border grid grid-cols-1 md:grid-cols-4 mt-6">
-                <div class="cell-border p-4 font-bold flex items-center justify-center text-center bg-gray-50 uppercase text-lg">
-                    Interested In
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Course Interested In</label>
+                    <div class="space-y-2 max-h-48 overflow-y-auto border-2 border-gray-100 p-3 rounded-md">
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="Engineering" class="w-4 h-4"> Engineering</label>
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="BBA" class="w-4 h-4"> BBA</label>
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="BCA" class="w-4 h-4"> BCA</label>
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="Pharmacy" class="w-4 h-4"> Pharmacy</label>
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="Nursing" class="w-4 h-4"> Nursing</label>
+                        <label class="flex items-center gap-3 text-sm"><input type="checkbox" name="interests" value="Law" class="w-4 h-4"> Law</label>
+                    </div>
                 </div>
-                <div class="cell-border col-span-3 grid grid-cols-2 md:grid-cols-3 p-4 gap-y-3">
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="Engineering"> Engineering</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="B.A."> B.A.</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="BBA"> BBA</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="B.Com"> B.Com</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="BCA"> BCA</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="B.Sc"> B.Sc</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="Pharmacy"> Pharmacy</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="Hotel Management"> Hotel Management</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="Nursing"> Nursing</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" name="interests" value="Law"> Law</label>
-                </div>
-            </div>
 
-            <div class="grid-border mt-6 flex flex-col md:flex-row items-center overflow-hidden">
-                <div class="p-3 bg-gray-50 font-bold uppercase md:border-r border-black w-full md:w-auto">
-                    Feedback About Presentation
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Feedback About Presentation</label>
+                    <select name="feedback" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none bg-white" required>
+                        <option value="">Select an option</option>
+                        <option value="Excellent">EXCELLENT</option>
+                        <option value="Very Good">VERY GOOD</option>
+                        <option value="Good">GOOD</option>
+                    </select>
                 </div>
-                <div class="flex flex-grow justify-around p-3 w-full">
-                    <label class="flex items-center gap-1"><input type="radio" name="feedback" value="Excellent" required> EXCELLENT</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="feedback" value="Very Good"> VERY GOOD</label>
-                    <label class="flex items-center gap-1"><input type="radio" name="feedback" value="Good"> GOOD</label>
-                </div>
-            </div>
 
-            <button type="submit" id="submitBtn" class="w-full bg-blue-900 text-white font-bold py-4 mt-8 rounded shadow-lg hover:bg-blue-800 transition-all uppercase tracking-widest">
-                Submit Enquiry
-            </button>
-        </form>
+                <button type="submit" id="submitBtn" class="w-full bg-blue-900 text-white font-bold py-4 rounded-md shadow-lg hover:bg-blue-800 transition-all uppercase">
+                    Submit Enquiry
+                </button>
+            </form>
+        </div>
     </div>
 
     <script>
-        /** * REPLACE THE URL BELOW WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-         */
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxKMitr8yMRBTevWObpdq3wOEqyvCj-iRBw4wUQF_AToTV1b--HerjEzQ1dLDZsFkUCZA/exec';
+        const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
         const form = document.getElementById('admissionForm');
         const btn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            btn.disabled = true;
-            btn.innerText = "Processing... Please Wait";
-
-            // Handling multiple checkboxes for "interests"
-            const formData = new FormData(form);
             
-            fetch(scriptURL, { method: 'POST', body: formData})
+            // Check mobile numbers again just in case
+            const sMob = form.studentMob.value;
+            const pMob = form.parentMob.value;
+            if (sMob.length !== 10 || pMob.length !== 10) {
+                alert("Please enter exactly 10 digits for mobile numbers.");
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = "Submitting... Please wait";
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    alert("Thank you! Your enquiry has been successfully recorded in our Google Sheet.");
+                    alert("Enquiry Submitted Successfully!");
                     form.reset();
                     btn.disabled = false;
-                    btn.innerText = "Submit Enquiry";
+                    btn.innerHTML = "Submit Enquiry";
                 })
                 .catch(error => {
-                    console.error('Error!', error.message);
-                    alert("Something went wrong. Please check your internet and try again.");
+                    alert("Error! Please check your connection.");
                     btn.disabled = false;
-                    btn.innerText = "Submit Enquiry";
+                    btn.innerHTML = "Submit Enquiry";
                 });
         });
     </script>
