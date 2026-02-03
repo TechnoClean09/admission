@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission Enquiry - Dr. Bapuji Salunkhe Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .is-listening {
+            animation: pulse-red 1.5s infinite;
+            border-color: #ef4444 !important;
+            background-color: #fef2f2;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 py-4 px-2 font-sans text-gray-900">
 
     <div class="max-w-xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
         
         <div class="bg-white p-6 text-center border-b-4 border-orange-500">
-            <p class="text-red-700 font-bold text-xs mb-2">“ज्ञान, विज्ञान आणि सुसंस्कार यांसाठी शिक्षणप्रसार” – शिक्षणमहर्षी डॉ. बापूजी साळुंखे</p>
+            <p class="text-red-700 font-bold text-[10px] md:text-xs mb-2">“ज्ञान, विज्ञान आणि सुसंस्कार यांसाठी शिक्षणप्रसार” – शिक्षणमहर्षी डॉ. बापूजी साळुंखे</p>
             <h1 class="text-blue-900 font-black text-lg uppercase leading-tight">Shri Swami Vivekanand Shikshan Sanstha's</h1>
-            <h2 class="text-blue-800 font-bold text-xl mt-1">DR. BAPUJI SALUNKHE INSTITUTE OF ENGINEERING AND TECHNOLOGY</h2>
+            <h2 class="text-blue-800 font-bold text-xl mt-1 leading-tight">DR. BAPUJI SALUNKHE INSTITUTE OF ENGINEERING AND TECHNOLOGY</h2>
             <div class="flex justify-center gap-4 mt-2 text-xs font-bold text-red-700">
                 <span>DEGREE (DBATU)</span>
                 <span class="text-gray-400">|</span>
@@ -29,12 +42,22 @@
                 
                 <div>
                     <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Student Full Name</label>
-                    <input type="text" name="studentName" placeholder="Enter your name" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
+                    <div class="relative">
+                        <input type="text" id="studentName" name="studentName" placeholder="Enter your name" class="w-full border-2 border-gray-200 p-3 pr-12 rounded-md focus:border-blue-500 outline-none" required>
+                        <button type="button" onclick="startVoice('studentName')" class="absolute right-2 top-2 p-2 text-gray-400 hover:text-blue-600">
+                            <i data-lucide="mic" class="w-5 h-5"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Parent Full Name</label>
-                    <input type="text" name="parentName" placeholder="Enter parent's name" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
+                    <div class="relative">
+                        <input type="text" id="parentName" name="parentName" placeholder="Enter parent's name" class="w-full border-2 border-gray-200 p-3 pr-12 rounded-md focus:border-blue-500 outline-none" required>
+                        <button type="button" onclick="startVoice('parentName')" class="absolute right-2 top-2 p-2 text-gray-400 hover:text-blue-600">
+                            <i data-lucide="mic" class="w-5 h-5"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -59,22 +82,22 @@
                 <div>
                     <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Category</label>
                     <div class="grid grid-cols-3 gap-2">
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="OPEN" required> OPEN
                         </label>
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="OBC"> OBC
                         </label>
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="EWS"> EWS
                         </label>
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="SC"> SC
                         </label>
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="ST"> ST
                         </label>
-                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-sm">
+                        <label class="flex items-center gap-2 p-2 border rounded cursor-pointer hover:bg-gray-50 text-xs md:text-sm">
                             <input type="radio" name="category" value="SEBC"> SEBC
                         </label>
                     </div>
@@ -82,7 +105,12 @@
 
                 <div>
                     <label class="block text-xs font-bold uppercase text-gray-600 mb-1">12th College Name</label>
-                    <input type="text" name="collegeName12th" placeholder="Enter your previous college" class="w-full border-2 border-gray-200 p-3 rounded-md focus:border-blue-500 outline-none" required>
+                    <div class="relative">
+                        <input type="text" id="collegeName" name="collegeName12th" placeholder="Enter your previous college" class="w-full border-2 border-gray-200 p-3 pr-12 rounded-md focus:border-blue-500 outline-none" required>
+                        <button type="button" onclick="startVoice('collegeName')" class="absolute right-2 top-2 p-2 text-gray-400 hover:text-blue-600">
+                            <i data-lucide="mic" class="w-5 h-5"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div>
@@ -115,6 +143,45 @@
     </div>
 
     <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- SPEECH TO TEXT LOGIC ---
+        function startVoice(elementId) {
+            const inputField = document.getElementById(elementId);
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+            if (!SpeechRecognition) {
+                alert("Speech recognition is not supported in this browser. Please use Chrome.");
+                return;
+            }
+
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-IN'; // Indian English accent support
+
+            recognition.onstart = () => {
+                inputField.classList.add('is-listening');
+                inputField.placeholder = "Listening...";
+            };
+
+            recognition.onresult = (event) => {
+                const result = event.results[0][0].transcript;
+                inputField.value = result;
+            };
+
+            recognition.onerror = () => {
+                alert("Speech recognition error. Please try again.");
+            };
+
+            recognition.onend = () => {
+                inputField.classList.remove('is-listening');
+                inputField.placeholder = "Enter text";
+            };
+
+            recognition.start();
+        }
+
+        // --- GOOGLE SHEETS SUBMISSION ---
         const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
         const form = document.getElementById('admissionForm');
         const btn = document.getElementById('submitBtn');
@@ -122,7 +189,6 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             
-            // Check mobile numbers again just in case
             const sMob = form.studentMob.value;
             const pMob = form.parentMob.value;
             if (sMob.length !== 10 || pMob.length !== 10) {
